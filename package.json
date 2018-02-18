@@ -1,0 +1,7 @@
+{
+  "name": "g8-js-sdk",
+  "version": "0.0.1",
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
+}
