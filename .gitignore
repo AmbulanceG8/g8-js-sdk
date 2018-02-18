@@ -1,0 +1,9 @@
+.idea/
+.vagrant/
+dist/
+jest_0/
+coverage/
+node_modules/
+src/log/*.log
+npm-debug.log
+/src/docker/docker-compose.lock

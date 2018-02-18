@@ -1,0 +1,14 @@
+node_modules
+flow-typed
+coverage
+dist
+src/adapters/cosium
+src/adapters/google
+src/adapters/idem_sante
+src/adapters/ods
+src/common/clic_api
+src/common/decoder
+src/common/encoder
+src/common/lib/retry.js
+src/common/lib/remove_deleted.js
+src/log
