@@ -6,6 +6,7 @@
     "jasmine": true
   },
   "rules": {
+    "prefer-promise-reject-errors": "off",
     "object-curly-spacing": "off",
     "max-len": [
       2,
