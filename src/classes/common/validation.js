@@ -14,7 +14,7 @@ export default class Validation {
       } else if (missingParams.length > 1) {
         return reject({error: {name: 'Oups...', message: `Parameter(s) "${missingParams}" are missing.`}});
       }
-      resolve(true);
+      return resolve(true);
     });
   }
 }
