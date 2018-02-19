@@ -61,14 +61,8 @@ export default class Common {
    */
   static retry(config) {
     return axios(config)
-      .then((res) => {
-        console.info('[sdk/com] - request successfully retried.');
-        return Promise.resolve(res);
-      })
-      .catch((e) => {
-        console.error('[sdk/com] - error durring retry.', e);
-        return Promise.reject(e);
-      });
+      .then((res) => Promise.resolve(res))
+      .catch((e) => Promise.reject(e));
   }
 
   /**
@@ -76,13 +70,9 @@ export default class Common {
    * @param callback
    */
   static refreshToken(callback) {
-    console.log('[sdk/com] - great, you have set your own refresh token logic.');
-    axios.interceptors.response.use((response) => response, (error) => {
-      console.log('[sdk/com] - custom refresh token function will be called');
-      return callback(error)
-        .then((response) => Promise.resolve(response))
-        .catch((error) => Promise.reject(Errors.getMessage(error.response)));
-    });
+    axios.interceptors.response.use((response) => response, (error) => callback(error)
+      .then((response) => Promise.resolve(response))
+      .catch((e) => Promise.reject(Errors.getMessage(e.response))));
   }
 
   /**
@@ -107,7 +97,6 @@ export default class Common {
       });
     });
     axios.defaults.headers.common = newHeader;
-    console.log(`[sdk/com] - header(s) ${headers} removed, current headers: `, axios.defaults.headers.common);
   }
 
   /**
