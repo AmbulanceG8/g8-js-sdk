@@ -68,7 +68,7 @@ export default class Common {
       .catch((e) => {
         console.error('[sdk/com] - error durring retry.', e);
         return Promise.reject(e);
-      })
+      });
   }
 
   /**
@@ -98,13 +98,13 @@ export default class Common {
    * @param headers
    */
   static deleteCommonHeaders(headers) {
-    let newHeader = {};
+    const newHeader = {};
     Object.keys(axios.defaults.headers.common).forEach((commonKey) => {
       headers.forEach((deleteKey) => {
         if (commonKey.toLowerCase() !== deleteKey.toLowerCase()) {
           newHeader[commonKey] = axios.defaults.headers.common[commonKey];
         }
-      })
+      });
     });
     axios.defaults.headers.common = newHeader;
     console.log(`[sdk/com] - header(s) ${headers} removed, current headers: `, axios.defaults.headers.common);

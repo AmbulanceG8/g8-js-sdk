@@ -42,6 +42,6 @@ export default class Logins extends Common {
   remove(urlParams, headers) {
     const url = Common.formatUrl(`${this.configuration.routes.logins}/{id}`, urlParams);
     return Validation.validateMandatoryParams(['authorization'], headers)
-      .then(() => super.deleteRequest(url, headers))
+      .then(() => super.deleteRequest(url, headers));
   }
 }

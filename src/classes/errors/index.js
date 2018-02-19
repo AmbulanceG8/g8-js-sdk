@@ -1,4 +1,4 @@
-import Generals  from './generals';
+import Generals from './generals';
 import Customs from './customs';
 
 export default class Errors {
