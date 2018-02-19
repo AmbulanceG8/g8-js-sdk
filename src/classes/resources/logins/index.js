@@ -1,4 +1,4 @@
-import Common from '../../common/common.js';
+import Common from '../../common/common';
 import Validation from '../../common/validation';
 
 export default class Logins extends Common {
