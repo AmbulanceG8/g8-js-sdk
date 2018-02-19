@@ -5,7 +5,7 @@ import Users from './classes/resources/users';
 import UsersDevicesPositions from './classes/resources/users/devices/positions';
 
 export default class SDK {
-  constructor(configuration: {}) {
+  constructor(configuration) {
     this.configuration = configuration;
     this.common = Common;
   }
