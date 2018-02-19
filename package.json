@@ -2,7 +2,8 @@
   "name": "g8-js-sdk",
   "version": "0.0.1",
   "dependencies": {
-    "axios": "^0.17.1"
+    "axios": "^0.17.1",
+    "stimmy": "^1.1.0"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.13.1",
