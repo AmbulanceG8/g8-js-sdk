@@ -52,7 +52,7 @@ const sdk = require('ambulance-g8-js-sdk');
 ```javascript
 import SDK from 'ambulance-g8-js-sdk'
 
-// To create an instance
+// To create your instance
 const sdk = SDK.create();
 ```
 
