@@ -116,7 +116,6 @@ sdk.common.refreshToken((error) => {
 export default sdk;
 ```
 
-
 ## Scripts
 
 Run using npm run <script> command.
@@ -140,7 +139,7 @@ MIT © [Dimitri DO BAIRRO](https://github.com/rimiti/g8-js-sdk/blob/master/LICEN
 [dev-dependencies]: https://david-dm.org/rimiti/g8-js-sdk?type=dev
 [security-version-badge]: https://nodesecurity.io/orgs/dim-solution/projects/7559b06b-d1bf-4f11-81b3-b2d2f6b80004/badge
 [security-version]: https://nodesecurity.io/orgs/dim-solution/projects/7559b06b-d1bf-4f11-81b3-b2d2f6b80004
-[codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/d3bba64e11d0acc2f525/maintainability
+[codeclimate-score-badge]: https://api.codeclimate.com/v1/badges/a36ff76f9ddf6297244b/maintainability
 [codeclimate-score]: https://codeclimate.com/github/rimiti/g8-js-sdk/maintainability
 [codeclimate-issues-badge]: https://codeclimate.com/github/rimiti/g8-js-sdk/badges/issue_count.svg
 [codeclimate-issues]: https://codeclimate.com/github/rimiti/g8-js-sdk
