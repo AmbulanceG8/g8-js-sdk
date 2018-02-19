@@ -49,11 +49,71 @@ import sdk from 'ambulance-g8-js-sdk';
 const sdk = require('ambulance-g8-js-sdk');
 ```
 
-```javascript
-import SDK from 'ambulance-g8-js-sdk'
 
-// To create your instance
+### Instantiate it
+
+```javascript
+import SDK from 'ambulance-g8-js-sdk';
+
+// Create your instance and export it
 const sdk = SDK.create();
+```
+
+### Refresh token
+
+Bellow, it's an example of a react-native custom refresh token implementation. Obviously, you have to adapt it with your own logic.
+
+```javascript
+import DeviceInfo from 'react-native-device-info';
+import {User, Authentication} from './storage';
+import SDK from 'ambulance-g8-js-sdk';
+
+const sdk = SDK.create();
+
+sdk.common.refreshToken((error) => {
+  if (!error.response && !error.response.data && !error.response.data.name) {
+    console.log('[lib/sdk] - unexpected error.', error);
+    return Promise.reject({error: {name: 'Oups...', message: `The request could not succeed.`}});
+  }
+
+  if (error.response.data.name === 'NotAuthenticated' && error.response.data.message === 'TOKEN_EXPIRED') {
+    console.info('[lib/sdk] - token expired received, start refresh token process.');
+    return Promise.all([
+      User.get(),
+      Authentication.get(),
+    ])
+      .then(([user, authentication]) => {
+        sdk.common.deleteCommonHeaders(['authorization']);
+        return sdk.logins.update({id: user.id}, {name: 'test'}, {
+          'x-refresh-token': authentication.refresh_token,
+          'x-device-uid': DeviceInfo.getUniqueID(),
+        })
+          .then((response) => {
+            sdk.common.addCommonHeaders({authorization: `Bearer ${response.token}`});
+            console.info('[lib/sdk] - new refresh token retrieved.');
+            return Authentication.save({token: `Bearer ${response.token}`, refresh_token: response.refresh_token})
+              .then(() => {
+                console.info('[lib/sdk] - retry same request with new access token.');
+                error.config.headers.authorization = `Bearer ${response.token}`;
+                console.log('[lib/sdk] - retry conf', error.config);
+                return sdk.common.retry(error.config);
+              });
+          });
+      })
+      .catch((e) => {
+        console.log('[lib/sdk] - error during refresh token process.', e);
+        if (!e.status) {
+          console.log('[lib/sdk] - unexpected error.', e);
+          return Promise.reject({error: {name: 'Oups...', message: `The request could not succeed.`}});
+        }
+        return Promise.reject(e);
+      });
+  }
+  console.log('[lib/sdk] - dispatch error to the next catch.', error);
+  return Promise.reject(error);
+});
+
+export default sdk;
 ```
 
 
