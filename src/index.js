@@ -13,6 +13,8 @@ let configuration = {
 };
 
 export default {
-  configure: (config) => configuration = jsonOverride(configuration, config),
+  configure: (config) => {
+    configuration = jsonOverride(configuration, config);
+  },
   create: () => new SDK(configuration),
 };
