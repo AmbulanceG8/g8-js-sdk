@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ambulance G8 Javascript SDK",
   "license": "MIT",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rimiti/g8-js-sdk.git"
@@ -51,7 +52,7 @@
     "test": "npm run test-only",
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
-    "build": "babel src/*.js src/**/*.js src/**/**/*.js src/**/**/**/*.js src/**/**/**/**/*.js -d dist",
-    "build:watch": "babel src/*.js src/**/*.js src/**/**/*.js src/**/**/**/*.js src/**/**/**/**/*.js -d dist --watch"
+    "build": "babel src/ -d dist/ --source-maps inline",
+    "build:watch": "babel src/ -d dist/ --watch --source-maps inline"
   }
 }
