@@ -3,6 +3,7 @@ import Logins from './classes/resources/logins';
 import Passwords from './classes/resources/passwords';
 import Users from './classes/resources/users';
 import UsersDevicesPositions from './classes/resources/users/devices/positions';
+import UsersOrders from './classes/resources/users/orders';
 
 export default class SDK {
   constructor(configuration) {
@@ -52,5 +53,16 @@ export default class SDK {
       this.usersDevicesPositionsClass = new UsersDevicesPositions(this.configuration);
     }
     return this.usersDevicesPositionsClass;
+  }
+
+  /**
+   * @description Returns UsersOrders singleton.
+   * @returns {UsersOrders}
+   */
+  get usersOrders() {
+    if (!this.usersOrdersClass) {
+      this.usersOrdersClass = new UsersOrders(this.configuration);
+    }
+    return this.usersOrdersClass;
   }
 }
