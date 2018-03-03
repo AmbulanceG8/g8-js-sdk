@@ -8,7 +8,7 @@ let configuration = {
     logins: '/logins',
     passwords: '/passwords',
     users: '/users',
-    usersOrders: '/users',
+    usersOrders: '/users/{userId}/orders',
     usersDevicesPositions: '/users/{userId}/devices/{deviceId}/positions',
   },
 };
