@@ -11,7 +11,7 @@ export default class UsersOrders extends Common {
    */
   create(urlParams, body, headers) {
     const url = Common.formatUrl(this.configuration.routes.usersOrders, urlParams);
-    return Validation.validateMandatoryParams(['first_name', 'last_name', 'status', 'mobility', 'supported', 'weight'], body)
+    return Validation.validateMandatoryParams(['status', 'mobility', 'supported', 'weight', 'vehicle'], body)
       .then(() => super.postRequest(url, body, headers));
   }
 }
