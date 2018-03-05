@@ -14,4 +14,15 @@ export default class UsersOrders extends Common {
     return Validation.validateMandatoryParams(['status', 'mobility', 'supported', 'weight', 'vehicle'], body)
       .then(() => super.postRequest(url, body, headers));
   }
+
+  /**
+   * @description Get orders.
+   * @param urlParams
+   * @param headers
+   * @return {Promise}
+   */
+  get(urlParams, headers) {
+    const url = Common.formatUrl(this.configuration.routes.usersOrders, urlParams);
+    return super.getRequest(url, headers);
+  }
 }
