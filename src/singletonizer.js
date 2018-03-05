@@ -4,6 +4,7 @@ import Passwords from './classes/resources/passwords';
 import Users from './classes/resources/users';
 import UsersDevicesPositions from './classes/resources/users/devices/positions';
 import UsersOrders from './classes/resources/users/orders';
+import UsersOrdersId from './classes/resources/users/orders/id';
 import UsersOrdersProducts from './classes/resources/users/orders/products';
 
 export default class SDK {
@@ -65,6 +66,17 @@ export default class SDK {
       this.usersOrdersClass = new UsersOrders(this.configuration);
     }
     return this.usersOrdersClass;
+  }
+
+  /**
+   * @description Returns UsersOrdersId singleton.
+   * @returns {UsersOrdersId}
+   */
+  get usersOrdersId() {
+    if (!this.usersOrdersIdClass) {
+      this.usersOrdersIdClass = new UsersOrdersId(this.configuration);
+    }
+    return this.usersOrdersIdClass;
   }
 
   /**
