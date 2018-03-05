@@ -15,7 +15,7 @@ export default class Common {
    * @return {Promise}
    */
   getRequest(url, body, headers = {}) {
-    return axios.get(this.configuration.host + url, body, Common.getHeaders(headers))
+    return axios.get(this.configuration.host + url, Common.getHeaders(headers))
       .then(({data}) => Promise.resolve(data));
   }
 
