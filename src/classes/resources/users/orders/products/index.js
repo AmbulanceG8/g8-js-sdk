@@ -14,4 +14,15 @@ export default class UsersOrdersProducts extends Common {
     return Validation.validateMandatoryParams(['quantity', 'start_date', 'position_start', 'position_end'], body)
       .then(() => super.postRequest(url, body, headers));
   }
+
+  /**
+   * @description Get products in order.
+   * @param urlParams
+   * @param headers
+   * @return {Promise}
+   */
+  get(urlParams, headers) {
+    const url = Common.formatUrl(this.configuration.routes.usersOrdersProducts, urlParams);
+    return super.getRequest(url, headers);
+  }
 }
