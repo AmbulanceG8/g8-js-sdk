@@ -25,16 +25,4 @@ export default class UsersOrders extends Common {
     const url = Common.formatUrl(this.configuration.routes.usersOrders, urlParams);
     return super.getRequest(url, headers);
   }
-
-  /**
-   * @description Update order.
-   * @param urlParams
-   * @param body
-   * @param headers
-   * @return {Promise}
-   */
-  update(urlParams, body, headers) {
-    const url = Common.formatUrl(this.configuration.routes.usersOrders, urlParams);
-    return super.putRequest(url, body, headers);
-  }
 }
