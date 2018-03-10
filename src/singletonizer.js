@@ -40,7 +40,7 @@ export default class SDK {
    * @description Returns UsersId singleton.
    * @return {UsersId}
    */
-  get UsersId() {
+  get usersId() {
     if (!this.usersIdClass) {
       this.usersIdClass = new UsersId(this.configuration);
     }
