@@ -2,6 +2,7 @@ import Common from './classes/common/common';
 import Logins from './classes/resources/logins';
 import Passwords from './classes/resources/passwords';
 import Users from './classes/resources/users';
+import UsersId from './classes/resources/users/id';
 import UsersDevicesPositions from './classes/resources/users/devices/positions';
 import UsersOrders from './classes/resources/users/orders';
 import UsersOrdersId from './classes/resources/users/orders/id';
@@ -33,6 +34,17 @@ export default class SDK {
       this.usersClass = new Users(this.configuration);
     }
     return this.usersClass;
+  }
+
+  /**
+   * @description Returns UsersId singleton.
+   * @return {UsersId}
+   */
+  get UsersId() {
+    if (!this.usersIdClass) {
+      this.usersIdClass = new UsersId(this.configuration);
+    }
+    return this.usersIdClass;
   }
 
   /**
