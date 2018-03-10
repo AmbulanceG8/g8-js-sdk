@@ -8,6 +8,7 @@ let configuration = {
     logins: '/logins',
     passwords: '/passwords',
     users: '/users',
+    usersId: '/users/{userId}',
     usersOrders: '/users/{userId}/orders',
     usersOrdersId: '/users/{userId}/orders/{orderId}',
     usersOrdersProducts: '/users/{userId}/orders/{orderId}/products',
