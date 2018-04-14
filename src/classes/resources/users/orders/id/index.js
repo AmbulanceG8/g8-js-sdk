@@ -23,4 +23,15 @@ export default class UsersOrdersId extends Common {
     const url = Common.formatUrl(this.configuration.routes.usersOrdersId, urlParams);
     return super.getRequest(url, headers);
   }
+
+  /**
+   * @description Remove order.
+   * @param urlParams
+   * @param headers
+   * @return {Promise}
+   */
+  remove(urlParams, headers) {
+    const url = Common.formatUrl(this.configuration.routes.usersOrdersId, urlParams);
+    return super.deleteRequest(url, headers);
+  }
 }
