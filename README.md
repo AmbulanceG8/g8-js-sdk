@@ -34,6 +34,7 @@ $ npm install g8-js-sdk --save
 * [passwords.create()](#createPasswords)
 * [users.create()](#createUsers)
 * [usersDevicesPositions.create()](#createUserDevicesPositions)
+* [searchesAmbulance.create()](#createSearchesAmbulance)
 
 ## Examples
 
