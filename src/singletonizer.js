@@ -7,6 +7,7 @@ import UsersDevicesPositions from './classes/resources/users/devices/positions';
 import UsersOrders from './classes/resources/users/orders';
 import UsersOrdersId from './classes/resources/users/orders/id';
 import UsersOrdersProducts from './classes/resources/users/orders/products';
+import SearchesAmbulances from './classes/resources/searches/ambulances';
 
 export default class SDK {
   constructor(configuration) {
@@ -100,5 +101,16 @@ export default class SDK {
       this.usersOrdersProductsClass = new UsersOrdersProducts(this.configuration);
     }
     return this.usersOrdersProductsClass;
+  }
+
+  /**
+   * @description Returns UsersOrders singleton.
+   * @returns {SearchesAmbulances}
+   */
+  get searchesAmbulances() {
+    if (!this.searchesAmbulancesClass) {
+      this.searchesAmbulancesClass = new SearchesAmbulances(this.configuration);
+    }
+    return this.searchesAmbulancesClass;
   }
 }
