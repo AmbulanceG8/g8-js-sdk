@@ -12,6 +12,7 @@ let configuration = {
     usersOrders: '/users/{userId}/orders',
     usersOrdersId: '/users/{userId}/orders/{orderId}',
     usersOrdersProducts: '/users/{userId}/orders/{orderId}/products',
+    usersOrdersCommissions: '/users/{userId}/orders/{orderId}/commissions',
     usersDevicesPositions: '/users/{userId}/devices/{deviceId}/positions',
     searchesAmbulances: '/searches/ambulances',
   },
