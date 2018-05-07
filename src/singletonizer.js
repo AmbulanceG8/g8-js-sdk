@@ -8,6 +8,7 @@ import UsersOrders from './classes/resources/users/orders';
 import UsersOrdersId from './classes/resources/users/orders/id';
 import UsersOrdersProducts from './classes/resources/users/orders/products';
 import UsersOrdersCommissions from './classes/resources/users/orders/commissions';
+import UsersOrdersCommissionsRequests from './classes/resources/users/orders/commissionsRequests';
 import SearchesAmbulances from './classes/resources/searches/ambulances';
 
 export default class SDK {
@@ -104,7 +105,6 @@ export default class SDK {
     return this.usersOrdersProductsClass;
   }
 
-
   /**
    * @description Returns UsersOrdersCommissions singleton.
    * @returns {UsersOrdersCommissions}
@@ -114,6 +114,17 @@ export default class SDK {
       this.usersOrdersCommissionsClass = new UsersOrdersCommissions(this.configuration);
     }
     return this.usersOrdersCommissionsClass;
+  }
+
+  /**
+   * @description Returns UsersOrdersCommissionsRequests singleton.
+   * @returns {UsersOrdersCommissionsRequests}
+   */
+  get usersOrdersCommissionsRequests() {
+    if (!this.usersOrdersCommissionsRequestsClass) {
+      this.usersOrdersCommissionsRequestsClass = new UsersOrdersCommissionsRequests(this.configuration);
+    }
+    return this.usersOrdersCommissionsRequestsClass;
   }
 
   /**
