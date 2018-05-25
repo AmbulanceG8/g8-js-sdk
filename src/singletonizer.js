@@ -7,8 +7,8 @@ import UsersDevicesPositions from './classes/resources/users/devices/positions';
 import UsersOrders from './classes/resources/users/orders';
 import UsersOrdersId from './classes/resources/users/orders/id';
 import UsersOrdersProducts from './classes/resources/users/orders/products';
-import UsersOrdersCommissions from './classes/resources/users/orders/commissions';
-import UsersOrdersCommissionsRequests from './classes/resources/users/orders/commissionsRequests';
+import UsersCommissions from './classes/resources/users/commissions';
+import UsersCommissionsRequests from './classes/resources/users/commissionsRequests';
 import SearchesAmbulances from './classes/resources/searches/ambulances';
 
 export default class SDK {
@@ -106,25 +106,25 @@ export default class SDK {
   }
 
   /**
-   * @description Returns UsersOrdersCommissions singleton.
-   * @returns {UsersOrdersCommissions}
+   * @description Returns UsersCommissions singleton.
+   * @returns {UsersCommissions}
    */
   get usersOrdersCommissions() {
-    if (!this.usersOrdersCommissionsClass) {
-      this.usersOrdersCommissionsClass = new UsersOrdersCommissions(this.configuration);
+    if (!this.usersCommissionsClass) {
+      this.usersCommissionsClass = new UsersCommissions(this.configuration);
     }
-    return this.usersOrdersCommissionsClass;
+    return this.usersCommissionsClass;
   }
 
   /**
-   * @description Returns UsersOrdersCommissionsRequests singleton.
-   * @returns {UsersOrdersCommissionsRequests}
+   * @description Returns UsersCommissionsRequests singleton.
+   * @returns {UsersCommissionsRequests}
    */
   get usersOrdersCommissionsRequests() {
-    if (!this.usersOrdersCommissionsRequestsClass) {
-      this.usersOrdersCommissionsRequestsClass = new UsersOrdersCommissionsRequests(this.configuration);
+    if (!this.usersCommissionsRequestsClass) {
+      this.usersCommissionsRequestsClass = new UsersCommissionsRequests(this.configuration);
     }
-    return this.usersOrdersCommissionsRequestsClass;
+    return this.usersCommissionsRequestsClass;
   }
 
   /**
