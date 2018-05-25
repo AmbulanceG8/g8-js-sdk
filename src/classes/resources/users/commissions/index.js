@@ -1,6 +1,6 @@
-import Common from '../../../../common/common';
+import Common from '../../../common/common';
 
-export default class UsersOrdersCommissions extends Common {
+export default class UsersCommissions extends Common {
   /**
    * @description Get user's commissions.
    * @param urlParams
