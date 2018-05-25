@@ -8,7 +8,7 @@ export default class UsersCommissions extends Common {
    * @return {Promise}
    */
   get(urlParams, headers) {
-    const url = Common.formatUrl(this.configuration.routes.usersOrdersCommissions, urlParams);
+    const url = Common.formatUrl(this.configuration.routes.usersCommissions, urlParams);
     return super.getRequest(url, headers);
   }
 }
