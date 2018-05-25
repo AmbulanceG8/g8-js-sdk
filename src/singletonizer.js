@@ -109,7 +109,7 @@ export default class SDK {
    * @description Returns UsersCommissions singleton.
    * @returns {UsersCommissions}
    */
-  get usersOrdersCommissions() {
+  get usersCommissions() {
     if (!this.usersCommissionsClass) {
       this.usersCommissionsClass = new UsersCommissions(this.configuration);
     }
@@ -120,7 +120,7 @@ export default class SDK {
    * @description Returns UsersCommissionsRequests singleton.
    * @returns {UsersCommissionsRequests}
    */
-  get usersOrdersCommissionsRequests() {
+  get usersCommissionsRequests() {
     if (!this.usersCommissionsRequestsClass) {
       this.usersCommissionsRequestsClass = new UsersCommissionsRequests(this.configuration);
     }
