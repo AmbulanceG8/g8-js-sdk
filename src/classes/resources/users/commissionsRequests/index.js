@@ -1,7 +1,7 @@
-import Common from '../../../../common/common';
-import Validation from '../../../../common/validation';
+import Common from '../../../common/common';
+import Validation from '../../../common/validation';
 
-export default class UsersOrdersCommissionsRequests extends Common {
+export default class UsersCommissionsRequests extends Common {
   /**
    * @description Create a commission request.
    * @param urlParams
