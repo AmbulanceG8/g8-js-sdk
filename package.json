@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/rimiti/g8-js-sdk#readme",
   "dependencies": {
+    "@rimiti/stimmy": "^1.4.1",
     "axios": "^0.18.0",
-    "json-override": "^0.2.0",
-    "stimmy": "^1.2.2"
+    "json-override": "^0.2.0"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.15.0",
