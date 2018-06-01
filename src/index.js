@@ -9,6 +9,7 @@ let configuration = {
     passwords: '/passwords',
     users: '/users',
     usersId: '/users/{userId}',
+    usersCompanies: '/users/{userId}/companies',
     usersCommissions: '/users/{userId}/commissions',
     usersCommissionsRequests: '/users/{userId}/commissionsRequests',
     usersOrders: '/users/{userId}/orders',
