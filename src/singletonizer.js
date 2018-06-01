@@ -8,6 +8,7 @@ import UsersOrders from './classes/resources/users/orders';
 import UsersOrdersId from './classes/resources/users/orders/id';
 import UsersOrdersProducts from './classes/resources/users/orders/products';
 import UsersCompanies from './classes/resources/users/companies';
+import UsersCompaniesId from './classes/resources/users/companies/id';
 import UsersCommissions from './classes/resources/users/commissions';
 import UsersCommissionsRequests from './classes/resources/users/commissionsRequests';
 import SearchesAmbulances from './classes/resources/searches/ambulances';
@@ -126,6 +127,17 @@ export default class SDK {
       this.usersCompaniesClass = new UsersCompanies(this.configuration);
     }
     return this.usersCompaniesClass;
+  }
+
+  /**
+   * @description Returns UsersCompaniesId singleton.
+   * @returns {UsersCompaniesId}
+   */
+  get usersCompaniesId() {
+    if (!this.usersCompaniesIdClass) {
+      this.usersCompaniesIdClass = new UsersCompaniesId(this.configuration);
+    }
+    return this.usersCompaniesIdClass;
   }
 
   /**
