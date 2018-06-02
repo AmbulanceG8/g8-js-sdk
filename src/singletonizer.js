@@ -153,6 +153,17 @@ export default class SDK {
   }
 
   /**
+   * @description Returns UsersCompaniesPaymentMethodsId singleton.
+   * @returns {UsersCompaniesPaymentMethodsId}
+   */
+  get usersCompaniesPaymentMethodsId() {
+    if (!this.usersCompaniesPaymentMethodsIdClass) {
+      this.usersCompaniesPaymentMethodsIdClass = new UsersCompaniesPaymentMethodsId(this.configuration);
+    }
+    return this.usersCompaniesPaymentMethodsIdClass;
+  }
+
+  /**
    * @description Returns UsersCommissionsRequests singleton.
    * @returns {UsersCommissionsRequests}
    */
