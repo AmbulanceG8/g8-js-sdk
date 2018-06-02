@@ -14,4 +14,15 @@ export default class UsersCompaniesPaymentMethods extends Common {
     return Validation.validateMandatoryParams(['type', 'expiration_month', 'expiration_year', 'number', 'cvv2'], body)
       .then(() => super.postRequest(url, body, headers));
   }
+
+  /**
+   * @description Get user's company payment method.
+   * @param urlParams
+   * @param headers
+   * @return {Promise}
+   */
+  get(urlParams, headers) {
+    const url = Common.formatUrl(this.configuration.routes.usersCompaniesPaymentMethods, urlParams);
+    return super.getRequest(url, headers);
+  }
 }
