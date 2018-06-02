@@ -9,6 +9,7 @@ import UsersOrdersId from './classes/resources/users/orders/id';
 import UsersOrdersProducts from './classes/resources/users/orders/products';
 import UsersCompanies from './classes/resources/users/companies';
 import UsersCompaniesId from './classes/resources/users/companies/id';
+import UsersCompaniesPaymentMethods from './classes/resources/users/companies/paymentMethods';
 import UsersCommissions from './classes/resources/users/commissions';
 import UsersCommissionsRequests from './classes/resources/users/commissionsRequests';
 import SearchesAmbulances from './classes/resources/searches/ambulances';
@@ -138,6 +139,17 @@ export default class SDK {
       this.usersCompaniesIdClass = new UsersCompaniesId(this.configuration);
     }
     return this.usersCompaniesIdClass;
+  }
+
+  /**
+   * @description Returns UsersCompaniesPaymentMethods singleton.
+   * @returns {UsersCompaniesPaymentMethods}
+   */
+  get usersCompaniesPaymentMethods() {
+    if (!this.usersCompaniesPaymentMethodsClass) {
+      this.usersCompaniesPaymentMethodsClass = new UsersCompaniesPaymentMethods(this.configuration);
+    }
+    return this.usersCompaniesPaymentMethodsClass;
   }
 
   /**
