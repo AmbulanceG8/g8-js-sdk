@@ -8,14 +8,6 @@ export default class Common {
   }
 
   /**
-   * @description Returns default stimmy object.
-   * @returns {*}
-   */
-  static replacer() {
-    return stimmy();
-  }
-
-  /**
    * @description Runs GET request.
    * @param url
    * @param body
@@ -121,7 +113,8 @@ export default class Common {
    * @param values
    */
   static formatUrl(url, values) {
-    const urlTmp = Common.replacer(url, values);
+    const replacer = stimmy();
+    const urlTmp = replacer(url, values);
     if (urlTmp.includes('{') || urlTmp.includes('}')) {
       return Promise.reject({error: {name: 'Oups...', message: `Url parameter missing: ${urlTmp}`}});
     }
