@@ -1,4 +1,4 @@
-import stimmy from 'stimmy';
+import stimmy from '@rimiti/stimmy';
 import axios from './axios';
 import Errors from '../errors';
 
