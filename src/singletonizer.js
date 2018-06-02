@@ -10,6 +10,7 @@ import UsersOrdersProducts from './classes/resources/users/orders/products';
 import UsersCompanies from './classes/resources/users/companies';
 import UsersCompaniesId from './classes/resources/users/companies/id';
 import UsersCompaniesPaymentMethods from './classes/resources/users/companies/paymentMethods';
+import UsersCompaniesPaymentMethodsId from './classes/resources/users/companies/paymentMethods/id';
 import UsersCommissions from './classes/resources/users/commissions';
 import UsersCommissionsRequests from './classes/resources/users/commissionsRequests';
 import SearchesAmbulances from './classes/resources/searches/ambulances';
