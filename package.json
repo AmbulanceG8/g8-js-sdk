@@ -1,6 +1,6 @@
 {
   "name": "g8-js-sdk",
-  "version": "1.10.1",
+  "version": "1.11.0",
   "description": "Ambulance G8 Javascript SDK",
   "license": "MIT",
   "main": "dist/index.js",
