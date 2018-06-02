@@ -9,7 +9,7 @@ export default class UsersCompaniesId extends Common {
    * @return {Promise}
    */
   update(urlParams, body, headers) {
-    const url = Common.formatUrl(this.configuration.routes.usersId, urlParams);
+    const url = Common.formatUrl(this.configuration.routes.usersCompaniesId, urlParams);
     return super.putRequest(url, body, headers);
   }
 }
