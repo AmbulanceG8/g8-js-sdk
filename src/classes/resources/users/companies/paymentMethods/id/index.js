@@ -2,7 +2,7 @@ import Common from '../../../../../common/common';
 
 export default class UsersCompaniesPaymentMethods extends Common {
   /**
-   * @description Remove order.
+   * @description Remove company's payment method.
    * @param urlParams
    * @param headers
    * @return {Promise}
