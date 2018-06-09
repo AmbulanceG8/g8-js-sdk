@@ -11,6 +11,7 @@ let configuration = {
     usersId: '/users/{userId}',
     usersCompanies: '/users/{userId}/companies',
     usersCompaniesId: '/users/{userId}/companies/{companyId}',
+    usersCompaniesMarketplace: '/users/{userId}/companies/{companyId}/marketplace',
     usersCompaniesPaymentMethods: '/users/{userId}/companies/{companyId}/paymentMethods',
     usersCompaniesPaymentMethodsId: '/users/{userId}/companies/{companyId}/paymentMethods/{paymentMethodId}',
     usersCommissions: '/users/{userId}/commissions',
