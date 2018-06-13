@@ -1,5 +1,5 @@
 import jsonOverride from 'json-override';
-import SDK from './singletonizer';
+import SDK from './singletons';
 
 let configuration = {
   authentication: '',
