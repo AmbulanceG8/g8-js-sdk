@@ -13,7 +13,7 @@ export default class UsersCompaniesUsersId extends Common {
   }
 
   /**
-   * @description Get company's users.
+   * @description Get user from company.
    * @param urlParams
    * @param headers
    * @return {Promise}
