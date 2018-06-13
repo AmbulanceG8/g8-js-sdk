@@ -10,6 +10,8 @@ import UsersOrdersProducts from './classes/resources/users/orders/products';
 import UsersCompanies from './classes/resources/users/companies';
 import UsersCompaniesId from './classes/resources/users/companies/id';
 import UsersCompaniesMarketplace from './classes/resources/users/companies/marketplace';
+import UsersCompaniesUsers from './classes/resources/users/companies/users';
+import UsersCompaniesUsersId from './classes/resources/users/companies/users/id';
 import UsersCompaniesPaymentMethods from './classes/resources/users/companies/paymentMethods';
 import UsersCompaniesPaymentMethodsId from './classes/resources/users/companies/paymentMethods/id';
 import UsersCommissions from './classes/resources/users/commissions';
@@ -174,6 +176,28 @@ export default class SDK {
       this.usersCompaniesPaymentMethodsIdClass = new UsersCompaniesPaymentMethodsId(this.configuration);
     }
     return this.usersCompaniesPaymentMethodsIdClass;
+  }
+
+  /**
+   * @description Returns UsersCompaniesUsers singleton.
+   * @returns {UsersCompaniesUsers}
+   */
+  get usersCompaniesUsers() {
+    if (!this.usersCompaniesUsersClass) {
+      this.usersCompaniesUsersClass = new UsersCompaniesUsers(this.configuration);
+    }
+    return this.usersCompaniesUsersClass;
+  }
+
+  /**
+   * @description Returns UsersCompaniesUsersId singleton.
+   * @returns {UsersCompaniesUsersId}
+   */
+  get usersCompaniesUsersId() {
+    if (!this.usersCompaniesUsersIdClass) {
+      this.usersCompaniesUsersIdClass = new UsersCompaniesUsersId(this.configuration);
+    }
+    return this.usersCompaniesUsersIdClass;
   }
 
   /**
