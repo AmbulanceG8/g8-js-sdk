@@ -12,6 +12,8 @@ import UsersCompaniesId from './classes/resources/users/companies/id';
 import UsersCompaniesMarketplace from './classes/resources/users/companies/marketplace';
 import UsersCompaniesUsers from './classes/resources/users/companies/users';
 import UsersCompaniesUsersId from './classes/resources/users/companies/users/id';
+import UsersCompaniesOrders from './classes/resources/users/companies/orders';
+import UsersCompaniesOrdersId from './classes/resources/users/companies/orders/id';
 import UsersCompaniesPaymentMethods from './classes/resources/users/companies/paymentMethods';
 import UsersCompaniesPaymentMethodsId from './classes/resources/users/companies/paymentMethods/id';
 import UsersCommissions from './classes/resources/users/commissions';
