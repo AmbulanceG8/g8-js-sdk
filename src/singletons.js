@@ -14,6 +14,7 @@ import UsersCompaniesUsers from './classes/resources/users/companies/users';
 import UsersCompaniesUsersId from './classes/resources/users/companies/users/id';
 import UsersCompaniesOrders from './classes/resources/users/companies/orders';
 import UsersCompaniesOrdersId from './classes/resources/users/companies/orders/id';
+import UsersCompaniesOrdersInvoices from './classes/resources/users/companies/orders/invoices';
 import UsersCompaniesPaymentMethods from './classes/resources/users/companies/paymentMethods';
 import UsersCompaniesPaymentMethodsId from './classes/resources/users/companies/paymentMethods/id';
 import UsersCommissions from './classes/resources/users/commissions';
@@ -222,6 +223,17 @@ export default class SDK {
       this.usersCompaniesOrdersIdClass = new UsersCompaniesOrdersId(this.configuration);
     }
     return this.usersCompaniesOrdersIdClass;
+  }
+
+  /**
+   * @description Returns UsersCompaniesOrdersInvoices singleton.
+   * @returns {UsersCompaniesOrdersInvoices}
+   */
+  get usersCompaniesOrdersInvoices() {
+    if (!this.usersCompaniesOrdersInvoicesClass) {
+      this.usersCompaniesOrdersInvoicesClass = new UsersCompaniesOrdersInvoices(this.configuration);
+    }
+    return this.usersCompaniesOrdersInvoicesClass;
   }
 
   /**
