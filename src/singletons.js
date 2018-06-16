@@ -201,6 +201,28 @@ export default class SDK {
   }
 
   /**
+   * @description Returns UsersCompaniesOrders singleton.
+   * @returns {UsersCompaniesOrders}
+   */
+  get usersCompaniesOrders() {
+    if (!this.usersCompaniesOrdersClass) {
+      this.usersCompaniesOrdersClass = new UsersCompaniesOrders(this.configuration);
+    }
+    return this.usersCompaniesOrdersClass;
+  }
+
+  /**
+   * @description Returns UsersCompaniesOrdersId singleton.
+   * @returns {UsersCompaniesOrdersId}
+   */
+  get usersCompaniesOrdersId() {
+    if (!this.usersCompaniesOrdersIdClass) {
+      this.usersCompaniesOrdersIdClass = new UsersCompaniesOrdersId(this.configuration);
+    }
+    return this.usersCompaniesOrdersIdClass;
+  }
+
+  /**
    * @description Returns UsersCommissionsRequests singleton.
    * @returns {UsersCommissionsRequests}
    */
