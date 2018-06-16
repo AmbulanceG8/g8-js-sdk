@@ -13,6 +13,8 @@ let configuration = {
     usersCompaniesId: '/users/{userId}/companies/{companyId}',
     usersCompaniesMarketplace: '/users/{userId}/companies/{companyId}/marketplace',
     usersCompaniesPaymentMethods: '/users/{userId}/companies/{companyId}/paymentMethods',
+    usersCompaniesOrders: '/users/{userId}/companies/{companyId}/orders',
+    usersCompaniesOrdersId: '/users/{userId}/companies/{companyId}/orders/{orderId}',
     usersCompaniesUsers: '/users/{userId}/companies/{companyId}/users',
     usersCompaniesUsersId: '/users/{userId}/companies/{companyId}/users/{companyUserId}',
     usersCompaniesPaymentMethodsId: '/users/{userId}/companies/{companyId}/paymentMethods/{paymentMethodId}',
