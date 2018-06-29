@@ -1,4 +1,5 @@
 import Common from '../../../common/common';
+import Validation from '../../../common/validation';
 
 export default class UsersCommissionsRequests extends Common {
   /**
@@ -10,6 +11,7 @@ export default class UsersCommissionsRequests extends Common {
    */
   create(urlParams, body, headers) {
     const url = Common.formatUrl(this.configuration.routes.usersCommissionsRequests, urlParams);
-    return super.postRequest(url, body, headers);
+    return Validation.validateMandatoryParams(['isCompany'], body)
+      .then(() => super.postRequest(url, body, headers));
   }
 }
